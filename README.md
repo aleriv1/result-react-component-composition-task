@@ -1,16 +1,20 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Делить все композненты на statefull и stateless
+- Типизировать с помощью PropTypes
+- strict mode
+- 3x3
+- Над полем -- чей ход (крестика или нолика) либо информаия о победе одной из сторон
+- при клике на клетку в ней должен отрисовываться символ стороны, у которой был текущий ход (крестик или нолик)
+- если 3 символа в одну линию (горизонтальную, вертикальну, диагональную) -- остноавить игру и сообщить о победе крестика или нолика
+- реализовать кнопку `Начать заново`, при клике на которую поле будет очищаться и игра начнёться сначала
+- дизайн на усмотрение разработчика
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- игровое поле — 3х3 клетки;
+- над полем информация — чей текущий ход (крестика или нолика) / информация о победе одной из сторон или ничья;
+- при клике на клетку в ней должен отрисовываться символ стороны, у которой был текущий ход (крестик или нолик);
+- если 3 одинаковых символа размещается в одну линию (горизонтально, вертикально или по диагонали), то остановить игру и сообщить о победе крестика или нолика;
+- реализовать кнопку «Начать заново», при клике на которую поле будет очищаться и игра начнётся сначала;
+- дизайн на усмотрение разработчика.
