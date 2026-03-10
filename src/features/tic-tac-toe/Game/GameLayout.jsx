@@ -2,19 +2,20 @@ import { Infromation } from "../Information/Information";
 import { Field } from "../Field/Field";
 import { ResetGameButton } from "../ResetGameButton/ResetGameButton";
 import styles from "./GameLayout.module.scss";
+import PropTypes from "prop-types";
 
 export const GameLayout = ({
   currentPlayer,
-  isGameEnded,
-  isDraw,
-  field,
   setCurrentPlayer,
-  setIsGameEnded,
-  setIsDraw,
-  setField,
-  WIN_PATTERNS,
   currentStartPlayer,
   setCurrentStartPlayer,
+  isGameEnded,
+  setIsGameEnded,
+  isDraw,
+  setIsDraw,
+  field,
+  setField,
+  WIN_PATTERNS,
   winInd,
   setWinInd,
 }) => {
@@ -42,7 +43,7 @@ export const GameLayout = ({
           winInd={winInd}
           setWinInd={setWinInd}
         />
-        {isGameEnded ? (
+        {isGameEnded || isDraw ? (
           <ResetGameButton
             setCurrentPlayer={setCurrentPlayer}
             setIsGameEnded={setIsGameEnded}
@@ -56,4 +57,20 @@ export const GameLayout = ({
       </div>
     </>
   );
+};
+
+GameLayout.propTypes = {
+  currentPlayer: PropTypes.string,
+  setCurrentPlayer: PropTypes.func,
+  currentStartPlayer: PropTypes.string,
+  setCurrentStartPlayer: PropTypes.func,
+  isGameEnded: PropTypes.bool,
+  setIsGameEnded: PropTypes.func,
+  isDraw: PropTypes.bool,
+  setIsDraw: PropTypes.func,
+  field: PropTypes.array,
+  setField: PropTypes.func,
+  WIN_PATTERNS: PropTypes.array,
+  winInd: PropTypes.array,
+  setWinInd: PropTypes.func,
 };

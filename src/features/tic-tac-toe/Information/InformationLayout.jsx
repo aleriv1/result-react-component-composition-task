@@ -1,4 +1,5 @@
 import styles from "./InformationLayout.module.scss";
+import PropTypes from "prop-types";
 
 const InfromationLayout = ({ currentPlayer, isGameEnded, isDraw }) => {
   let message = "";
@@ -14,3 +15,9 @@ const InfromationLayout = ({ currentPlayer, isGameEnded, isDraw }) => {
 };
 
 export { InfromationLayout };
+
+InfromationLayout.propTypes = {
+  currentPlayer: PropTypes.string,
+  isGameEnded: PropTypes.bool,
+  isDraw: PropTypes.bool,
+};

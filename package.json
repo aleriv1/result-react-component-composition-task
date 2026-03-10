@@ -20,11 +20,13 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "babel-plugin-check-prop-types": "^1.1.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
     "less": "^4.5.1",
+    "prop-types": "^15.8.1",
     "sass": "^1.97.3",
     "vite": "^7.3.1"
   }

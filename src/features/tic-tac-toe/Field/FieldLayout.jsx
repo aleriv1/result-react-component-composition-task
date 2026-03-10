@@ -1,4 +1,5 @@
 import styles from "./FieldLayout.module.scss";
+import PropTypes from "prop-types";
 
 export const FieldLayout = ({
   field,
@@ -24,4 +25,11 @@ export const FieldLayout = ({
       })}
     </div>
   );
+};
+
+FieldLayout.propTypes = {
+  field: PropTypes.array,
+  isGameEnded: PropTypes.bool,
+  winInd: PropTypes.array,
+  handleGameClick: PropTypes.func,
 };

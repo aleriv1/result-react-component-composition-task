@@ -1,11 +1,11 @@
 import { FieldLayout } from "./FieldLayout";
+import PropTypes from "prop-types";
 
 export const Field = ({
   field,
   setField,
   currentPlayer,
   setCurrentPlayer,
-  isDraw,
   setIsDraw,
   isGameEnded,
   setIsGameEnded,
@@ -63,16 +63,24 @@ export const Field = ({
 
   return (
     <FieldLayout
-      handleGameClick={handleGameClick}
       field={field}
-      currentPlayer={currentPlayer}
-      setField={setField}
-      setCurrentPlayer={setCurrentPlayer}
-      isDraw={isDraw}
-      setIsDraw={setIsDraw}
+      handleGameClick={handleGameClick}
       isGameEnded={isGameEnded}
-      setIsGameEnded={setIsGameEnded}
       winInd={winInd}
     />
   );
+};
+
+Field.propTypes = {
+  currentPlayer: PropTypes.string,
+  setCurrentPlayer: PropTypes.func,
+  isGameEnded: PropTypes.bool,
+  setIsGameEnded: PropTypes.func,
+  isDraw: PropTypes.bool,
+  setIsDraw: PropTypes.func,
+  field: PropTypes.array,
+  setField: PropTypes.func,
+  WIN_PATTERNS: PropTypes.array,
+  winInd: PropTypes.array,
+  setWinInd: PropTypes.func,
 };

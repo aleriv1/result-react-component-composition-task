@@ -1,4 +1,5 @@
 import { ResetGameButtonLayout } from "./ResetGameButtonLayout";
+import PropTypes from "prop-types";
 
 export const ResetGameButton = ({
   setCurrentPlayer,
@@ -24,4 +25,14 @@ export const ResetGameButton = ({
   };
 
   return <ResetGameButtonLayout handleResetGame={handleResetGame} />;
+};
+
+ResetGameButton.propTypes = {
+  setCurrentPlayer: PropTypes.func,
+  currentStartPlayer: PropTypes.string,
+  setCurrentStartPlayer: PropTypes.func,
+  setIsGameEnded: PropTypes.func,
+  setIsDraw: PropTypes.func,
+  setField: PropTypes.func,
+  setWinInd: PropTypes.func,
 };
