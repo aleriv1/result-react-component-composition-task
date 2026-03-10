@@ -1,12 +1,24 @@
 import styles from "./FieldLayout.module.scss";
 
-export const FieldLayout = ({ field }) => {
+export const FieldLayout = ({
+  field,
+  handleGameClick,
+  isGameEnded,
+  winInd,
+}) => {
   return (
     <div className={styles["game-field"]}>
-      {field.map((item, id) => {
+      {field.map((item, ind) => {
         return (
-          <div key={id} className={styles.square}>
-            1
+          <div
+            key={ind}
+            className={`${styles.square} ${winInd.includes(ind) && styles.winCell} ${isGameEnded && !winInd.includes(ind) && styles["square-not-win"]}`}
+            onClick={() => {
+              if (isGameEnded || field[ind]) return;
+              handleGameClick(ind);
+            }}
+          >
+            {field[ind]}
           </div>
         );
       })}
