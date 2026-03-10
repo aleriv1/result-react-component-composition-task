@@ -19,7 +19,6 @@ export const Game = () => {
     [0, 4, 8],
     [2, 4, 6],
   ];
-  // console.log(isGameEnded);
 
   return (
     <GameLayout

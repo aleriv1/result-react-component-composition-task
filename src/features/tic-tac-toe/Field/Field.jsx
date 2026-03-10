@@ -24,7 +24,6 @@ export const Field = ({
         isArraysEqual = true;
       }
     }
-    // console.log([...cellSet]);
     setWinInd([...cellSet]);
     return isArraysEqual;
   };
@@ -35,8 +34,6 @@ export const Field = ({
     const winIndexes = arr
       .map((el, i) => (el === currentPlayer ? i : -1))
       .filter((v) => v !== -1);
-
-    // console.log(currentPlayer, winIndexes);
 
     for (const winArr of WIN_PATTERNS) {
       if (isArraysEqual(winArr, winIndexes)) {
@@ -51,7 +48,6 @@ export const Field = ({
     changedField[ind] = currentPlayer;
     setField(changedField);
     const isWinCheck = isWin(changedField, currentPlayer);
-    // console.log("isWinCheck", isWinCheck);
     if (isWinCheck) {
       setIsGameEnded(true);
     } else if (
