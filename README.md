@@ -1,3 +1,5 @@
+[https://aleriv1.github.io/result-react-component-composition-task/](https://aleriv1.github.io/result-react-component-composition-task/)
+
 # tic-tac-toe
 
 - игровое поле — 3х3 клетки;

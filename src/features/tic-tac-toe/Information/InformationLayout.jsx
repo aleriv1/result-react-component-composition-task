@@ -5,9 +5,9 @@ const InfromationLayout = ({ currentPlayer, isGameEnded, isDraw }) => {
   if (isDraw) {
     message = "Ничья";
   } else if (!isDraw && isGameEnded) {
-    message = `Победа: ${currentPlayer}`;
+    message = `Победа: ${currentPlayer}-ка`;
   } else {
-    message = `Ходит: ${currentPlayer}`;
+    message = `Ходит: ${currentPlayer}-к`;
   }
 
   return <h1 className={styles["game-title"]}>{message}</h1>;
